@@ -1,54 +1,57 @@
-
-
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        humanIMB humanIMB = new humanIMB(80,1.52);
-        System.out.println(humanIMB.Result());
+        HumanImb humanIMB = new HumanImb(80,1.52);
+        System.out.println(humanIMB.result());
     }
 }
-class humanIMB {
-    public double W; //Weight Human
-    public double H; // Height Human
-    private static double imb;
-    public humanIMB(double w, double h) {
-        W = w;
-        H = h;
-        imb = W / (H * H);
+
+class HumanImb {
+    private double weight;
+    private double height;
+    private double imb;
+
+    public HumanImb(double weight, double height) {
+        this.weight = weight;
+        this.height = height;
+        imb = weight / (height * height);
     }
-    public double takeW() {
-        return W;
+
+    public double getWeight() {
+        return weight;
     }
-    public void putW(double w) {
-        W = w;
-        imb = W / (H * H);
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+        imb = weight / (height * height);
     }
-    public double takeH() {
-        return H;
+
+    public double getHeight() {
+        return height;
     }
-    public void putH(double h) {
-        H = h;
-        imb = W / (H * H);
+
+    public void setHeight(double height) {
+        this.height = height;
+        imb = weight / (height * height);
     }
-    public static double takeImt() {
+    
+    public double getImb() {
         return imb;
     }
-    public static String Result() {
-        String  string = null;
-        if (imb >=18.5 & imb <25) {
-            string ="Norm";
+
+    public String result() {
+        String result = "";
+        if (imb >= 18.5 && imb < 25) {
+            result = "Norm";
         }
-        if (imb >=25 & imb <30) {
-            string ="Warning! ";
+        if (imb >= 25 && imb < 30) {
+            result = "Warning! ";
         }
-        if (imb >=30) {
-            string ="Fat";
+        if (imb >= 30) {
+            result = "Fat";
         }
-        if (imb <18.5) {
-            string ="Deficit";
+        if (imb < 18.5) {
+            result = "Deficit";
         }
-        return string;
+        return result;
     }
 }
