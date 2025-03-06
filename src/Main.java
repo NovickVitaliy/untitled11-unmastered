@@ -38,20 +38,21 @@ class HumanImb {
         return imb;
     }
 
-    public String result() {
-        String result = "";
+    public ImbStatus result() {
+        ImbStatus result = null;
         if (imb >= 18.5 && imb < 25) {
-            result = "Norm";
+            result = ImbStatus.Normal;
         }
         if (imb >= 25 && imb < 30) {
-            result = "Warning! ";
+            result = ImbStatus.Warning;
         }
         if (imb >= 30) {
-            result = "Fat";
+            result = ImbStatus.Fat;
         }
         if (imb < 18.5) {
-            result = "Deficit";
+            result = ImbStatus.Deficit;
         }
         return result;
     }
 }
+

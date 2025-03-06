@@ -106,3 +106,13 @@ BEFORE:
 AFTER:
 
 ![alt text](image-20.png)
+
+20. Create enum ```ImbStatus``` and use it instead of magical strings
+
+
+![alt text](image-21.png)   
+
+
+Usage:
+
+![alt text](image-22.png)
