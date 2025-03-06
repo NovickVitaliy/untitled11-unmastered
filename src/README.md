@@ -116,3 +116,5 @@ AFTER:
 Usage:
 
 ![alt text](image-22.png)
+
+21. Move ```HumanImb``` class to the separate file
